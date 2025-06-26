@@ -2,7 +2,8 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const router = express.Router();
-const DATA_PATH = path.join(__dirname, '../../data/items.json');
+const DATA_PATH = path.join(__dirname, '../../../data/items.json'); //Reference to DATA_PATH needed fixing
+const statsUtil = require('../utils/stats')
 
 // GET /api/stats
 router.get('/', (req, res, next) => {
@@ -13,7 +14,7 @@ router.get('/', (req, res, next) => {
     // Intentional heavy CPU calculation
     const stats = {
       total: items.length,
-      averagePrice: items.reduce((acc, cur) => acc + cur.price, 0) / items.length
+      averagePrice: statsUtil.mean(items) //items.reduce((acc, cur) => acc + cur.price, 0) / items.length
     };
 
     res.json(stats);
