@@ -80,7 +80,8 @@ router.post('/', async (req, res, next) => {
     if (
       !item ||
       typeof item.name !== 'string' ||
-      typeof item.price !== 'number'
+      typeof item.price !== 'number' ||
+      typeof item.category !== 'string'
     ) {
       return res.status(400).json({ error: 'Invalid payload' });
     }
