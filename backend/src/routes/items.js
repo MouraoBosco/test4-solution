@@ -4,6 +4,21 @@ const path = require('path');
 const router = express.Router();
 const DATA_PATH = path.join(__dirname, '../../../data/items.json');
 
+//nNormalizes texts for comparsion within query 
+function normalize(text) {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // remove accent marks
+    .replace(/[^\w\s]/g, '');        // remove punctuation
+}
+
+// escape special characters for safe use in RegExp
+function escapeRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+
 // Utility to read data (intentionally sync to highlight blocking issue)
 async function readData() {
   const raw = await fs.readFile(DATA_PATH);
@@ -19,7 +34,14 @@ router.get('/', async (req, res, next) => {
 
     if (q) {
       // Simple substring search (sub‑optimal)
-      results = results.filter(item => item.name.toLowerCase().includes(q.toLowerCase()));
+      // Adding changes to the substring search to make sure it now normalizes text from query
+      const cleanQuery = escapeRegex(normalize(q));
+      const regex = new RegExp(`\\b${cleanQuery}`, 'i');
+
+      results = results.filter(item =>
+        regex.test(normalize(item.name)) ||
+        regex.test(normalize(item.category))
+      );
     }
 
     if (limit) {
@@ -52,6 +74,7 @@ router.get('/:id', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try {
     // TODO: Validate payload (intentional omission)
+    // now payload is going through basic validation
     const item = req.body;
 
     if (
