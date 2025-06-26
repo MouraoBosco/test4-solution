@@ -53,6 +53,15 @@ router.post('/', async (req, res, next) => {
   try {
     // TODO: Validate payload (intentional omission)
     const item = req.body;
+
+    if (
+      !item ||
+      typeof item.name !== 'string' ||
+      typeof item.price !== 'number'
+    ) {
+      return res.status(400).json({ error: 'Invalid payload' });
+    }
+
     const data = await readData();
     item.id = Date.now();
     data.push(item);
