@@ -14,7 +14,7 @@ router.get('/', (req, res, next) => {
     // Intentional heavy CPU calculation
     const stats = {
       total: items.length,
-      averagePrice: statsUtil.mean(items) //items.reduce((acc, cur) => acc + cur.price, 0) / items.length
+      averagePrice: statsUtil.mean(items.map(i => i.price)) // now passing containing item prices to utils function
     };
 
     res.json(stats);
