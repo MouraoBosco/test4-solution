@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "jest"
+    "test": "jest",
+    "start:mock": "node src/mockTokenServer.js",
+    "start:api": "node src/index.js"
   },
   "dependencies": {
     "axios": "^1.9.0",
@@ -17,7 +19,8 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
+    "nock": "^14.0.5",
     "nodemon": "^3.0.2",
-    "supertest": "^6.3.3"
+    "supertest": "^6.3.4"
   }
 }
