@@ -15,9 +15,13 @@ const errorHandler = (err, req, res, next) => {
 };
 
 const getCookie = async () => {
-  // Use the local mock server
-  const response = await axios.get('http://localhost:4000/api/token');
-  return response.data;
+  try {
+    const response = await axios.get('http://localhost:4000/api/token')
+    return response.data.token;
+  } catch (err) {
+    console.warn('[getCookie] Failed to retrieve token:', err.message);
+    return null; // or return a fallback token, or proceed without
+  }
 };
 
 module.exports = { getCookie, notFound, errorHandler };
