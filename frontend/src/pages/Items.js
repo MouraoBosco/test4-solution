@@ -145,7 +145,14 @@ function Items() {
           }}>
           {[10, 20, 50].map(n => <option key={n} value={n}>{n} / page</option>)}
         </select>
-        <span style={{ color: '#6b7280', fontSize: '1em', fontWeight: 500, marginLeft: 8 }}>Total: {total}</span>
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: 8, background: '#f6f5fd',
+          borderRadius: 999, padding: '8px 22px', boxShadow: '0 1px 6px 0 rgba(75,42,173,0.07)',
+          fontWeight: 700, fontSize: '1.08em', color: '#4B2AAD',
+        }}>
+          <span style={{ fontSize: '1.18em', fontWeight: 400, letterSpacing: 0.5 }}>{total}</span>
+          <span style={{ fontWeight: 600, fontSize: '0.98em', color: '#7c6fd7', marginLeft: 4 }}>Total</span>
+        </div>
       </div>
       {/* Virtualized Responsive Grid */}
       <div ref={gridRef} style={{ width: '100%', maxWidth: 1600, margin: '0 auto' }}>
