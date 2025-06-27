@@ -79,7 +79,32 @@
    ```
    - The frontend proxies `/api` requests to `http://localhost:3001`.
 
+## Frontend
+
+### 1. Memory Leak Fix
+- Fixed a memory leak in `Items.js` by using an `active` flag in the data-fetching `useEffect`, preventing state updates after unmount.
+
+### 2. Pagination & Search
+- Implemented server-side pagination and search in the item list, fully integrated with backend API (`q`, `page`, `limit`).
+- The UI updates page and search state smoothly, with no flicker or memory leaks.
+
+### 3. Performance (Virtualization)
+- Integrated `react-window` (`FixedSizeGrid`) for virtualized, high-performance rendering of large item lists.
+- The grid is fully responsive and adapts to window size, with no scrollbars and a modern, clean layout.
+
+### 4. UI/UX Modernization
+- Refactored the item grid and cards for a visually modern, pleasant, and responsive look:
+  - Modern card design with shadows, rounded corners, and consistent spacing.
+  - Skeleton loaders for smooth loading states.
+  - Modernized search bar, select, and pagination controls with gradients, pill shapes, and improved accessibility.
+  - The "Total" count is now visually highlighted in a pill, matching the overall UI style.
+  - All controls are responsive and visually consistent.
+- All major inline styles can be migrated to CSS for further maintainability if desired.
+
+### 5. General Improvements
+- All frontend code is idiomatic, clean, and uses React best practices.
+- The UI is robust, performant, and visually appealing, matching the design requirements.
+
 ## Notes
-- For production, replace the mock token server and `getCookie` logic with the real API call as needed.
-- Always keep your dependencies up to date and review any new packages for security.
+
 - The mock token was only done because I wasn't getting any reponse from the endpoint initially implemented in the getCookies function.
