@@ -1,7 +1,392 @@
 [
-  { "id": 1, "name": "Laptop Pro", "category": "Electronics", "price": 2499 },
-  { "id": 2, "name": "Noise Cancelling Headphones", "category": "Electronics", "price": 399 },
-  { "id": 3, "name": "Ultra‑Wide Monitor", "category": "Electronics", "price": 999 },
-  { "id": 4, "name": "Ergonomic Chair", "category": "Furniture", "price": 799 },
-  { "id": 5, "name": "Standing Desk", "category": "Furniture", "price": 1199 }
+  {
+    "id": 1,
+    "name": "Laptop Pro",
+    "category": "Electronics",
+    "price": 2499
+  },
+  {
+    "id": 2,
+    "name": "Noise Cancelling Headphones",
+    "category": "Electronics",
+    "price": 399
+  },
+  {
+    "id": 3,
+    "name": "Ultra‑Wide Monitor",
+    "category": "Electronics",
+    "price": 999
+  },
+  {
+    "id": 4,
+    "name": "Ergonomic Chair",
+    "category": "Furniture",
+    "price": 799
+  },
+  {
+    "id": 5,
+    "name": "Standing Desk",
+    "category": "Furniture",
+    "price": 1199
+  },
+  {
+    "id": 6,
+    "name": "Wireless Mouse",
+    "category": "Accessories",
+    "price": 49
+  },
+  {
+    "id": 7,
+    "name": "Mechanical Keyboard",
+    "category": "Accessories",
+    "price": 129
+  },
+  {
+    "id": 8,
+    "name": "Smartphone X",
+    "category": "Electronics",
+    "price": 1099
+  },
+  {
+    "id": 9,
+    "name": "Tablet S",
+    "category": "Electronics",
+    "price": 599
+  },
+  {
+    "id": 10,
+    "name": "Smartwatch Z",
+    "category": "Electronics",
+    "price": 299
+  },
+  {
+    "id": 11,
+    "name": "Bookshelf",
+    "category": "Furniture",
+    "price": 199
+  },
+  {
+    "id": 12,
+    "name": "Coffee Table",
+    "category": "Furniture",
+    "price": 149
+  },
+  {
+    "id": 13,
+    "name": "4K TV 55\"",
+    "category": "Electronics",
+    "price": 1399
+  },
+  {
+    "id": 14,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 89
+  },
+  {
+    "id": 15,
+    "name": "Air Purifier",
+    "category": "Appliances",
+    "price": 249
+  },
+  {
+    "id": 16,
+    "name": "Electric Kettle",
+    "category": "Appliances",
+    "price": 39
+  },
+  {
+    "id": 17,
+    "name": "Gaming Chair",
+    "category": "Furniture",
+    "price": 349
+  },
+  {
+    "id": 18,
+    "name": "Gaming Mousepad",
+    "category": "Accessories",
+    "price": 25
+  },
+  {
+    "id": 19,
+    "name": "Fitness Tracker",
+    "category": "Electronics",
+    "price": 99
+  },
+  {
+    "id": 20,
+    "name": "VR Headset",
+    "category": "Gaming",
+    "price": 599
+  },
+  {
+    "id": 21,
+    "name": "Console Controller",
+    "category": "Gaming",
+    "price": 69
+  },
+  {
+    "id": 22,
+    "name": "Microwave Oven",
+    "category": "Appliances",
+    "price": 179
+  },
+  {
+    "id": 23,
+    "name": "Blender",
+    "category": "Appliances",
+    "price": 89
+  },
+  {
+    "id": 24,
+    "name": "Wireless Router",
+    "category": "Electronics",
+    "price": 129
+  },
+  {
+    "id": 25,
+    "name": "External SSD",
+    "category": "Accessories",
+    "price": 159
+  },
+  {
+    "id": 26,
+    "name": "Webcam HD",
+    "category": "Electronics",
+    "price": 79
+  },
+  {
+    "id": 27,
+    "name": "Air Fryer",
+    "category": "Appliances",
+    "price": 139
+  },
+  {
+    "id": 28,
+    "name": "Bookshelf Speaker",
+    "category": "Electronics",
+    "price": 219
+  },
+  {
+    "id": 29,
+    "name": "Laptop Stand",
+    "category": "Accessories",
+    "price": 45
+  },
+  {
+    "id": 30,
+    "name": "Wall Clock",
+    "category": "Furniture",
+    "price": 59
+  },
+  {
+    "id": 31,
+    "name": "Smart Home Hub",
+    "category": "Electronics",
+    "price": 149
+  },
+  {
+    "id": 32,
+    "name": "Portable Charger",
+    "category": "Accessories",
+    "price": 39
+  },
+  {
+    "id": 33,
+    "name": "Smart Light Bulb",
+    "category": "Electronics",
+    "price": 29
+  },
+  {
+    "id": 34,
+    "name": "Wireless Earbuds",
+    "category": "Electronics",
+    "price": 199
+  },
+  {
+    "id": 35,
+    "name": "Mini Projector",
+    "category": "Electronics",
+    "price": 299
+  },
+  {
+    "id": 36,
+    "name": "Dish Rack",
+    "category": "Furniture",
+    "price": 35
+  },
+  {
+    "id": 37,
+    "name": "USB Hub",
+    "category": "Accessories",
+    "price": 25
+  },
+  {
+    "id": 38,
+    "name": "Toaster Oven",
+    "category": "Appliances",
+    "price": 119
+  },
+  {
+    "id": 39,
+    "name": "Ceiling Fan",
+    "category": "Appliances",
+    "price": 179
+  },
+  {
+    "id": 40,
+    "name": "TV Stand",
+    "category": "Furniture",
+    "price": 249
+  },
+  {
+    "id": 41,
+    "name": "HDMI Cable",
+    "category": "Accessories",
+    "price": 15
+  },
+  {
+    "id": 42,
+    "name": "Smart Plug",
+    "category": "Electronics",
+    "price": 22
+  },
+  {
+    "id": 43,
+    "name": "Dehumidifier",
+    "category": "Appliances",
+    "price": 299
+  },
+  {
+    "id": 44,
+    "name": "Smart Thermostat",
+    "category": "Electronics",
+    "price": 249
+  },
+  {
+    "id": 45,
+    "name": "Gaming Laptop",
+    "category": "Electronics",
+    "price": 1899
+  },
+  {
+    "id": 46,
+    "name": "Gaming Monitor",
+    "category": "Gaming",
+    "price": 599
+  },
+  {
+    "id": 47,
+    "name": "Noise Machine",
+    "category": "Appliances",
+    "price": 49
+  },
+  {
+    "id": 48,
+    "name": "Electric Toothbrush",
+    "category": "Appliances",
+    "price": 69
+  },
+  {
+    "id": 49,
+    "name": "Water Filter Pitcher",
+    "category": "Appliances",
+    "price": 39
+  },
+  {
+    "id": 50,
+    "name": "Mobile Gimbal",
+    "category": "Accessories",
+    "price": 119
+  },
+  {
+    "id": 51,
+    "name": "Adjustable Bed Frame",
+    "category": "Furniture",
+    "price": 499
+  },
+  {
+    "id": 52,
+    "name": "Desk Organizer",
+    "category": "Accessories",
+    "price": 29
+  },
+  {
+    "id": 53,
+    "name": "Monitor Arm",
+    "category": "Accessories",
+    "price": 89
+  },
+  {
+    "id": 54,
+    "name": "Smart Fridge Sensor",
+    "category": "Electronics",
+    "price": 39
+  },
+  {
+    "id": 55,
+    "name": "Indoor Camera",
+    "category": "Electronics",
+    "price": 129
+  },
+  {
+    "id": 56,
+    "name": "LED Strip Light",
+    "category": "Electronics",
+    "price": 49
+  },
+  {
+    "id": 57,
+    "name": "Electric Heater",
+    "category": "Appliances",
+    "price": 149
+  },
+  {
+    "id": 58,
+    "name": "Work Lamp",
+    "category": "Furniture",
+    "price": 79
+  },
+  {
+    "id": 59,
+    "name": "Laptop Backpack",
+    "category": "Accessories",
+    "price": 89
+  },
+  {
+    "id": 60,
+    "name": "Wireless Presenter",
+    "category": "Accessories",
+    "price": 39
+  },
+  {
+    "id": 61,
+    "name": "Surge Protector",
+    "category": "Accessories",
+    "price": 25
+  },
+  {
+    "id": 62,
+    "name": "Monitor Cleaning Kit",
+    "category": "Accessories",
+    "price": 19
+  },
+  {
+    "id": 63,
+    "name": "Smart Mirror",
+    "category": "Electronics",
+    "price": 299
+  },
+  {
+    "id": 64,
+    "name": "Mini Fridge",
+    "category": "Appliances",
+    "price": 219
+  },
+  {
+    "id": 65,
+    "name": "Conference Microphone",
+    "category": "Accessories",
+    "price": 149
+  }
 ]
