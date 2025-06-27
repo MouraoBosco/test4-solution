@@ -31,19 +31,19 @@ describe('GET /api/items', () => {
     it('should return a list of items', async () => {
         const response = await request(app).get('/api/items');
         expect(response.status).toBe(200);
-        expect(Array.isArray(response.body)).toBe(true);
+        expect(Array.isArray(response.body.items)).toBe(true);
     });
 
     it('should filter items by query', async () => {
         const response = await request(app).get('/api/items?q=desk');
         expect(response.status).toBe(200);
-        expect(response.body.some(item => item.name.toLowerCase().includes('desk'))).toBe(true);
+        expect(response.body.items.some(item => item.name.toLowerCase().includes('desk'))).toBe(true);
     });
 
     it('should limit the number of returned items', async () => {
         const response = await request(app).get('/api/items?limit=2');
         expect(response.status).toBe(200);
-        expect(response.body.length).toBeLessThanOrEqual(2);
+        expect(response.body.items.length).toBeLessThanOrEqual(2);
     });
 
     it('should return 404 if item not found', async () => {
