@@ -1,3 +1,9 @@
+<!--
+!! IMPORTANT: For setup and usage, please follow the guide in SOLUTION.MD instead of this README. !!
+-->
+
+# <span style="color:red; font-weight:bold;">⚠️ Please follow the setup and usage instructions in <code>SOLUTION.MD</code> (not this README) for the correct workflow! ⚠️</span>
+
 # Take‑Home Assessment
 
 Welcome, candidate! This project contains **intentional issues** that mimic real‑world scenarios.
@@ -8,7 +14,7 @@ Your task is to refactor, optimize, and fix these problems.
 ### 🔧 Backend (Node.js)
 
 1. **Refactor blocking I/O**  
-   - `src/routes/items.js` uses `fs.readFileSync`. Replace with non‑blocking async operations.
+   - `src/routes/items.js` uses `fs.readFileSync`. Replace with non‑blocking async operations. ## done 
 
 2. **Performance**  
    - `GET /api/stats` recalculates stats on every request. Cache results, watch file changes, or introduce a smarter strategy.
